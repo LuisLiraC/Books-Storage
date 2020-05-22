@@ -8,8 +8,8 @@ module.exports = {
 
     entry: './frontend/app.js',
     output: {
-        path: path.join(__dirname, 'backend/public'),
-        filename: 'js/bundle.js'
+        path: path.join(__dirname, './backend/public'),
+        filename: './js/bundle.js'
     },
     mode: 'production',
 
@@ -38,7 +38,7 @@ module.exports = {
             }
         }),
         new miniCssExtractPlugin({
-            filename: 'css/bundle.css'
+            filename: './css/bundle.css'
         })
     ],
     devtool: 'source-map'
