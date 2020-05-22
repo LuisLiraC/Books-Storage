@@ -6,10 +6,10 @@ const devMode = process.env.NODE_ENV !== 'production';
 
 module.exports = {
 
-    entry: './frontend/app.js',
+    entry: path.join(__dirname, 'frontend/app.js'),
     output: {
-        path: path.join(__dirname, './backend/public'),
-        filename: './js/bundle.js',
+        path: path.join(__dirname, 'backend/public'),
+        filename: 'js/bundle.js',
         publicPath: '/'
     },
     mode: 'production',
@@ -28,7 +28,7 @@ module.exports = {
 
     plugins: [
         new HtmlWebpackPlugin({
-            template: './frontend/index.html',
+            template: path.join(__dirname, 'frontend/index.html'),
             minify: {
                 collapseWhitespace: true,
                 removeComments: true,
